@@ -5,8 +5,8 @@ import pickle
 import numpy
 import matplotlib.pyplot as plt
 
-sys.path.append(".../tools")
-sys.path.append(".../final_project")
+sys.path.append("../tools/")
+sys.path.append("../final_project/")
 
 from feature_format import featureFormat, targetFeatureSplit
 from tester import dump_classifier_and_data
@@ -15,7 +15,7 @@ from tester import dump_classifier_and_data
 ### features_list is a list of strings, each of which is a feature name.
 ### The first feature must be "poi".
 ### Load the dictionary containing the dataset
-with open("/Users/Apple/Desktop/udacity/MechineLearning/project/final_project/final_project_dataset.pkl", "r") as data_file:
+with open("final_project_dataset.pkl", "r") as data_file:
     data_dict = pickle.load(data_file)
 
 # from given 
@@ -213,8 +213,8 @@ features_list = new_features_list
 
 dump_classifier_and_data(clf, my_dataset, features_list)
 #####################################################################
-pickle.dump(clf, open("/Users/Apple/Desktop/udacity/MechineLearning/project/final_project／my_classifier.pkl", "w") )
-pickle.dump(my_dataset, open("/Users/Apple/Desktop/udacity/MechineLearning/project/final_project／my_dataset.pkl", "w") )
-pickle.dump(features_list, open("/Users/Apple/Desktop/udacity/MechineLearning/project/final_project／my_feature_list.pkl", "w") )
+pickle.dump(clf, open("my_classifier.pkl", "w") )
+pickle.dump(my_dataset, open("my_dataset.pkl", "w") )
+pickle.dump(features_list, open("my_feature_list.pkl", "w") )
 
 #

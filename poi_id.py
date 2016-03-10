@@ -166,9 +166,9 @@ for train_idx, test_idx in skf:
     ### fit the classifier using training set, and test on test set
     
 
-    parameter = {'base_estimator':[None, DecisionTreeClassifier(min_samples_split=5, max_features = None),
-                                   RandomForestClassifier(min_samples_split=3, max_features = None)],
-                                   'n_estimators':[20, 50, 110]}
+    parameter = {'base_estimator':[None, DecisionTreeClassifier(min_samples_split=10, max_features = None),
+                                   RandomForestClassifier(min_samples_split=10, max_features = None)],
+                                   'n_estimators':[30, 60, 110]}
                                    
                                    
 ### Task 5: Tune your classifier to achieve better than .3 precision and recall 
